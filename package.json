@@ -1,11 +1,11 @@
 {
-  "name": "site",
+  "name": "website",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "build": "next build && next export",
+    "start": "npm run build && http-server ./out",
     "lint": "next lint"
   },
   "dependencies": {
