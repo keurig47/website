@@ -1,0 +1,14 @@
+runtime: nodejs16
+
+handlers:
+
+- url: /
+  static_files: out/index.html
+  upload: out/index.html
+
+- url: /.*
+  static_files: out/(.*\.(html))$
+  upload: out/(.*\.(html))$
+
+- url: /
+  static_dir: out
