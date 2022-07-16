@@ -1,17 +1,19 @@
 import React from "react";
-import Link from "next/link";
-import Box from "@mui/material/Box";
+import { Box } from "@chakra-ui/react";
 import Hero from "../components/Hero";
-import styles from "../styles/Home.module.css";
+
+const styles = {
+  container: {
+    display: "flex",
+    flex: 1,
+    flexDirection: "column",
+  },
+};
 
 export default function Home() {
   return (
-    <Box className={styles.banner}>
+    <Box sx={styles.container}>
       <Hero />
-      <h1 className={styles.title}>
-        Welcome to
-        <Link href="/aboutme">My Site</Link>
-      </h1>
     </Box>
   );
 }

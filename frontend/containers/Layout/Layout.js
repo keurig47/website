@@ -1,18 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
-import AppBar from "@mui/material/AppBar";
-import Typography from "@mui/material/Typography";
-import Toolbar from "@mui/material/Toolbar";
-import styles from "../../styles/Layout.module.css";
+import { Box } from "@chakra-ui/react";
+import NavBar from "../../components/NavBar";
+
+const styles = {
+  main: {
+    display: "flex",
+    flex: 1,
+    flexDirection: "column",
+  },
+};
 
 const Layout = ({ children }) => (
   <>
-    <AppBar>
-      <Toolbar>
-        <Typography>David Keimig</Typography>
-      </Toolbar>
-    </AppBar>
-    <main className={styles.main}>{children}</main>
+    <NavBar />
+    <Box as="main" sx={styles.main}>
+      {children}
+    </Box>
   </>
 );
 
