@@ -1,6 +1,8 @@
-import '../styles/globals.css'
-import Layout from '../containers/Layout';
-import Head from 'next/head'
+import React from "react";
+import PropTypes from "prop-types";
+import Head from "next/head";
+import Layout from "../containers/Layout";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -13,7 +15,12 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <Component {...pageProps} />
     </Layout>
-  )
+  );
 }
 
-export default MyApp
+MyApp.propTypes = {
+  Component: PropTypes.node.isRequired,
+  pageProps: PropTypes.object.isRequired,
+};
+
+export default MyApp;
