@@ -2,5 +2,8 @@ steps:
 - name: gcr.io/cloud-builders/npm
   dir: frontend
   args: ["install"]
+- name: gcr.io/cloud-builders/npm
+  dir: frontend
+  args: ["run", "build"]
 - name: gcr.io/cloud-builders/gcloud
   args: ["app", "deploy", "dispatch.yaml", "./frontend/app.yaml", "./backend/api.yaml"]
