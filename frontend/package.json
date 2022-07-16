@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
-    "start": "npm run build && http-server ./out",
+    "start": "npm run build",
+    "test": "npm run build && http-server ./out",
     "prettier": "npx prettier --write .",
     "lint": "next lint"
   },
