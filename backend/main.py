@@ -1,13 +1,16 @@
-import datetime
-
-from flask import Flask, render_template
+from flask import Flask
 
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/api')
 def root():
-    return { "success": "Hello World" }
+    return { "success": "Root" }
+
+
+@app.route('/api/<route>')
+def route(route):
+    return { "success": route }
 
 
 if __name__ == '__main__':

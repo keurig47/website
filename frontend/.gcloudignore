@@ -15,9 +15,3 @@
 
 # Node.js dependencies:
 node_modules/
-
-# Python dependencies:
-env/
-__pychache__/
-
-.DS_Store
